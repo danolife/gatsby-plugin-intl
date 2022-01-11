@@ -71,7 +71,7 @@ export default ({ element, props }, pluginOptions) => {
       const queryParams = search || ""
       const newUrl = withPrefix(`/${detected}${originalPath}${queryParams}`)
       window.localStorage.setItem("gatsby-intl-language", detected)
-      window.location.replace(newUrl)
+      return window.location.replace(newUrl)
     }
   }
   const renderElement = isRedirect
